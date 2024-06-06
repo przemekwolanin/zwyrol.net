@@ -1,0 +1,163 @@
+:root {
+    --green: #4dcd00;
+    --light-green: #d0ffb4;
+    --dark-green: #2a6f00;
+    --yellow: #e5e204;
+    --search-grey: #3a3f44;
+    --pagination-link: #a1b596;
+}
+
+body {
+    background-image: url('../img/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 100px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1, p.search__result {
+    color: var(--light-green);
+    margin-bottom: 1em;
+    padding-bottom: 0.2em;
+}
+h1 {
+    font-size: 2em;
+    text-align: center;
+}
+form[role=search] .form-control {
+    background: var(--search-grey);
+    border: 1px solid #5d646c;
+}
+form[role=search] .form-control::placeholder {
+    color: #929dab;
+    opacity: 1; /* Firefox */
+}
+  
+form[role=search] .form-control::-ms-input-placeholder { /* Edge 12 -18 */
+    color: #929dab;
+}
+
+a[title=Permalink] {
+    color: var(--light-green);
+}
+
+.navbar {
+    border-bottom: 1px solid var(--green);
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: var(--green);
+    font-weight: 700;
+}
+.nav-link:focus, .nav-link:hover {
+    color: var(--green);
+}
+
+.nav-link {
+    color: var(--dark-green);
+    font-size: 1em;
+}
+
+.nav-link img {
+    height: 20px;
+}
+
+.joke_elem a {
+    color: var(--dark-green);
+}
+.joke_elem__tags {
+    font-size: 0.8em;
+}
+.card.bg-light, .card-body.bg-light {
+    background-color: #c5c5c5 !important;
+}
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgb(13 253 20 / 12%)
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+footer .container ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+footer .container ul li {
+    padding: 0 20px;
+}
+
+footer .footer-nav {
+    width: 100%;
+}
+
+footer .copy {
+    color: var(--green);
+    white-space: nowrap;
+}
+
+.about__political {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.pagination {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+.pagination .page-item:first-child .page-link,
+.pagination .page-item:last-child .page-link,
+.pagination .page-item .page-link {
+    border-radius: 0;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.pagination .active>.page-link, .page-link.active {
+    color: var(--dark-green);
+    font-weight: 700;
+    text-decoration: underline;
+}
+.pagination .page-link {
+    color: var(--pagination-link);
+}
+.pagination .page-link:hover {
+    color: var(--dark-green);
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+/* .pagination .page-link,
+.pagination .page-item
+.pagination > li > a {
+    outline: none;
+    border: none;
+} */
+.pagination .page-link:focus {
+    box-shadow: none;
+}
+
+footer {
+    border-top: 1px solid var(--green);
+}

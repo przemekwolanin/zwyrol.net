@@ -1,0 +1,15 @@
+<% if(typeof joke !== 'undefined') { %>
+    <h1>Zwyrol #<%= joke.id %></h1>
+
+
+    <div class="card card-body mt-3 bg-light">
+        <p>Zwyrol:  <a href="/zwyrol/<%= joke.id %>" title="Permalink">#<%= joke.id %></a></p>
+        <p><%= joke.date %></p>
+        <p><%- joke.joke %></p>
+    </div>
+
+
+
+<% } else { %>
+    <h1>Nie ma takiej dupy</h1>
+<% } %>

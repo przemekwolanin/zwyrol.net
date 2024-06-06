@@ -1,0 +1,35 @@
+<h1>Losuj zwyrola</h1>
+<% if(typeof joke !== 'undefined') { %>
+    <div class="joke_elem card bg-light mb-3">
+        <div class="card-body">
+            <div class="row" style="border-bottom: 1px solid #000;">
+                <div class="col-2">
+                    <p>Zwyrol <a href="/zwyrol/<%= joke.id %>" title="Permalink">#<%- joke.id %></a> 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16">
+                            <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"/>
+                            <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"/>
+                        </svg>
+                    </p>
+                </div>
+                <div class="col-8">
+                    <p style="display: flex; align-items: center;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+                            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
+                        </svg>
+                        <span style="padding-left: 6px;"><%- joke.date %></span>
+                    </p>
+                </div>
+            </div>
+            <div class="joke_elem__joke" style="padding-top: 20px;">
+                <p><%- joke.joke %></p>
+            </div>
+            <!-- Your share button code -->
+            <div class="fb-share-button" 
+            data-href="https://www.zwyrol.net/zwyrol/<%= joke.id %>" 
+            data-layout="button_count">
+            </div>
+        </div>
+    </div>
+<% } else { %>
+    <h1>Nie ma takiej firmy</h1>
+<% } %>
