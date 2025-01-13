@@ -4,7 +4,6 @@
     --dark-green: #2a6f00;
     --yellow: #e5e204;
     --search-grey: #3a3f44;
-    --pagination-link: #a1b596;
 }
 
 body {
@@ -124,38 +123,6 @@ footer .copy {
 .pagination {
     flex-wrap: wrap;
     justify-content: center;
-    padding: 20px;
-}
-.pagination .page-item:first-child .page-link,
-.pagination .page-item:last-child .page-link,
-.pagination .page-item .page-link {
-    border-radius: 0;
-    background-color: transparent;
-    border-color: transparent;
-}
-
-.pagination .active>.page-link, .page-link.active {
-    color: var(--dark-green);
-    font-weight: 700;
-    text-decoration: underline;
-}
-.pagination .page-link {
-    color: var(--pagination-link);
-}
-.pagination .page-link:hover {
-    color: var(--dark-green);
-    font-weight: 700;
-    text-decoration: underline;
-}
-
-/* .pagination .page-link,
-.pagination .page-item
-.pagination > li > a {
-    outline: none;
-    border: none;
-} */
-.pagination .page-link:focus {
-    box-shadow: none;
 }
 
 footer {
