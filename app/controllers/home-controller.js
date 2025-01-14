@@ -9,11 +9,15 @@ class HomeController {
         const where = { $or: [{joke: {$regex: q || '', $options: 'i'}},{tags: {$regex: q || '', $options: 'i'}}] };
         let query = Joke.find(where);
 
+        // console.log(query);
+        
+
         query = query.skip((page - 1) * perPage);
         query.limit(perPage);
 
         const jokes = await query.exec();
-        const resultsCount = await Joke.find(where).count();
+        const resultsCount = await Joke.find(where).countDocuments();
+        // const resultsCount = 500;
         const pagesCount = Math.ceil(resultsCount / perPage);
         
         res.render('pages/home', {
