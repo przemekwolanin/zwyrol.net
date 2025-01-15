@@ -11,7 +11,7 @@ app.use(expressEjsLayouts);
 app.set('views',path.join(__dirname + '/../views'));
 app.set('layout', 'layouts/main');
 
-app.use(express.static('public'));
+app.use(express.static('public'), { dotfiles: 'allow' });
 
 // body parser -- application/x-wwww-form-urlencoded
 app.use(express.urlencoded({ extended: true }))
